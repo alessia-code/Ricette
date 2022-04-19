@@ -13,7 +13,7 @@
   <body>
     
 <header>
-  <div class="collapse bg-dark" id="navbarHeader"> <!-- nasconde items delle tre striscette -->
+  <div class=" collapse bg-dark" id="navbarHeader"> <!-- nasconde items delle tre striscette -->
     <div class="container">
       <div class="row">
         <div class="col-sm-8 col-md-7 py-4">
@@ -31,44 +31,91 @@
       </div>
     </div>
   </div>
-  <div class="navbar navbar-dark bg-dark shadow-sm">
+  <!-- inizio BARRA -->
+  <div class="navbar navbar-dark bg-dark shadow-sm fixed-top">
     <div class="container">
       <a href="#" class="navbar-brand d-flex align-items-center">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="me-2" viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
         <!-- macchinetta fotografica di sopra -->
-        <b>Album</b> <!-- b: grassetto -->
+        <b>Home</b> <!-- b: grassetto -->
       </a>
-      <p>
-        <a href="#" class="btn btn-primary my-2">Main call to action</a>
-        <a href="#" class="btn btn-secondary my-2">Secondary action</a>
-      </p>
+      <div class="nav me-auto">
+        
+        <a href="#" class=" btn bg-dark bottoniNavBar px-2">About Us</a>
+        <a href="#" class="btn bg-dark bottoniNavBar">Consigli</a>
+        <a href="#" class="btn bg-dark bottoniNavBar">Login</a>
+      </div>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>  <!-- pulsante tre striscette -->
       </button>
       
     </div>
+     <!-- fine BARRA -->
   </div>
 </header>
 
 <main>
 <!-- inizio immaginona-->
+<div class="immagine">
   <section class="py-5 text-center container">
-    <div class="row py-lg-5">
-      <div class="col-lg-6 col-md-8 mx-auto">
-        <h1 class="fw-light">Album example</h1>
-        <div class="immagine"> <h1>Titolo</h1> </div>
+        <h1 class="fw-light">Titolo</h1>
+  </section>
+</div>
+  <!-- fine immaginona-->
 
+ <!-- inizio intro-->
+<div class="title">
+  titolo
+</div>
+<div class="intro">
+  testo
+</div>
+ <!-- fine intro-->
+
+ <!-- inizio bottoni articoli e ricette-->
+ <section id="bottoniAR">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-md-6" id="col_left" >
+          <a href="articoli.html"><img  id="logo-articoli" src="/immagini/sfondoHTML.jpg"></a>
+          <br>
+        <a href="articoli.html"  class="servizi-text">accedia agli articoli..</a>
+        <p class="text-muted">testo in grigio carino!   </p>
+      </div>
+      <div class="col-md-6" id="col_right" >
+          <a  href="ricette.html"><img  id="logo-ricette" src="/immagini/sfondoHTML.jpg"></a>
+          <br>
+        <a href="ricette.html" class="servizi-text">scopri le ricette..</a>
+        <p class="text-muted">testo in grigio carino!</p>
       </div>
     </div>
-  </section>
-  <!-- fine immaginana-->
+  </div>
+</section>
 
-
-
+ <!-- fine bottoni articoli e ricette-->
+ 
+ <!-- inizio articoli e ricette recenti -->
   <div class="album py-5 bg-light">
-    <div class="container">
+    <div class="grid">
+      <a  class="c1 navbar-brand js-scroll-trigger" href="ultimoarticolo.html"><img id="logo-home" src="/immagini/sfondoHTML.jpg" ></a>
+      <div class="title"> ultimo articolo </div>
+      <a  class="c2 navbar-brand js-scroll-trigger" href="ultimoarticolo.html"><img id="logo-home" src="/immagini/sfondoHTML.jpg" ></a>
+      <a  class="c3 navbar-brand js-scroll-trigger" href="ultimoarticolo.html"><img id="logo-home" src="/immagini/sfondoHTML.jpg" ></a>
+      <a  class="c4 navbar-brand js-scroll-trigger" href="ultimoarticolo.html"><img id="logo-home" src="/immagini/sfondoHTML.jpg" ></a>
+      <a  class="c5 navbar-brand js-scroll-trigger" href="ultimoarticolo.html"><img id="logo-home" src="/immagini/sfondoHTML.jpg" ></a>
+      <div class="titledx"> ultime &ensp; </div>
+      
+      <div class= "titlesx">ricette</div>
+    </div>
+  </div> 
+   <!-- fine articoli e ricette recenti -->
 
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+</main>
+
+
+
+
+     <!-- 
         <div class="col">
           <div class="card shadow-sm">
             <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
@@ -215,24 +262,17 @@
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
+      -->
 
-</main>
 
 <footer class="text-muted py-5">
   <div class="container">
     <p class="float-end mb-1">
       <a href="#">Back to top</a>
     </p>
-    <p class="mb-1">Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
-    <p class="mb-0">New to Bootstrap? <a href="/">Visit the homepage</a> or read our <a href="../getting-started/introduction/">getting started guide</a>.</p>
+    <p class="mb-4">LTW 2021-2022<a href="/"> </p>
   </div>
 </footer>
-
-
-    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
 
       
   </body>

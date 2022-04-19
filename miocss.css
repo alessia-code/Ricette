@@ -12,15 +12,121 @@
     }
   }
   .immagine{ 
-    text-align: center; 
+    text-align: center;
+    max-width: 100%; 
     color:rgb(54, 54, 49); 
-    background-image: url("./immagini/sfondoHTML.jpg"); 
+    background-image: url("./immagini/prova.jpg"); 
     background-repeat: no-repeat; 
     background-position: center center; 
+    background-attachment: scroll;
+    background-size: cover;
     padding-top: 150px; 
     padding-bottom: 100px; 
     font-family: Georgia, 'Times New Roman', Times, serif;  
     font-style: oblique; 
     font-stretch: condensed;  
      
+}
+
+.intro{
+    text-align: center;
+    color:rgb(54, 54, 49);
+    font-style: oblique; 
+    font-stretch: condensed;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: large;
+
+}
+.title{
+    text-align: center;
+    color:rgb(1, 1, 1);
+    font-style: oblique; 
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-stretch: condensed;
+    font-size:xx-large;
+}
+.titlesx{
+    text-align: left;
+    color:rgb(1, 1, 1);
+    font-style: oblique; 
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-stretch: condensed;
+    font-size:xx-large;
+
+}
+.titledx{
+    text-align: right;
+    color:rgb(1, 1, 1);
+    font-style: oblique; 
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-stretch: condensed;
+    font-size:xx-large;
+
+}
+
+.grid{
+    display:grid;
+
+    grid-template:
+    'a b c'
+    'a d e' /1fr 1fr 1fr;
+    padding: 5rem;
+    text-align:center; 
+    border:solid 1px; 
+    border-left:solid 1px ;                                                                                                                                                                                                                        
+}
+
+.grid > a{
+    border:solid 1px;
+
+}
+.c1{
+    grid-area:a;
+    padding:5rem;
+}
+.c2{grid-area:b;}
+.c3{grid-area:c;}
+.c4{grid-area:d;}
+.c5{grid-area:e;}
+/* formattazione delle varie immagini della home*/
+#logo-home{
+    width:100%;
+    height:100%;
+}
+#logo-articoli{
+    
+    width:30%;
+    height:30%;
+    
+}
+#logo-ricette{
+    
+    width:30%;
+    height:30%;
+}
+.col_left{
+    opacity:0;    
+}
+.col_right{
+    opacity:0;  
+}
+.servizi-text{ 
+    font-size: 150%; 
+    color: rgb(29, 29, 29); 
+    font-family: 'Times New Roman', Times, serif; 
+    cursor: pointer; 
+} 
+.servizi-text:hover{ 
+   text-decoration: none; 
+}
+
+
+.bottoniNavBar{
+    color:white;
+    text-align: right;
+    float: right;
+
+}
+.bottoniNavBar:hover{
+    color: rgb(106, 97, 97);
 }
