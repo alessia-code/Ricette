@@ -132,224 +132,82 @@
   </div> 
    <!-- fine articoli e ricette recenti -->
 
-<!-- inizio form -->
+<!-- inizio FORM -->
  <div>
    <form class="containerForm"method="post" action="" name="login">
-    <div>nome: 
-      <br>
-      <input type="TEXT" name="nome" maxlength="30" size="50" placeholder="inserisci nome">
+    <div> 
+      <label for="nome" class="form-label">Nome</label>
+      <input type="TEXT" name="nome" class="form-control" id="nome" maxlength="30" size="50" placeholder="inserisci nome">
     </div>
-    <div>cognome: 
-      <br>
-      <input type="TEXT" name="cognome" maxlength="30" size="50" placeholder="inserisci cognome">
+    <div> 
+      <label for="cognome" class="form-label">Cognome</label>
+      <input type="TEXT" name="cognome" class="form-control" id="cognome" maxlength="30" size="50" placeholder="inserisci cognome">
     </div>
-    <div>email:
-      <br>
-      <input type="email" name="email" class="form-control" size="50" placeholder="Inserisci email">
+    <div>
+      <label for="email" class="form-label">Inserisci email</label>
+      <input type="email" nome="email" class="form-control" id="email" size="50" placeholder="name@example.com">
     </div>
-    <div>conferma email:
-      <br> 
-      <input type="email" name="confermaEmail" class="form-control" size="50" placeholder="Inserisci email">
+    <div>
+      <label for="emailconferma" class="form-label">Conferma email</label>
+      <input type="email" nome="emailconferma" class="form-control" id="emailconferma" size="50" placeholder="name@example.com">
     </div>
-    <div> password
-      <br>
-      <INPUT type="PASSWORD" name="password" maxlength="40" size="33">
+    <div>
+      <label for="password" class="form-label">Inserisci Password</label>
+      <INPUT type="PASSWORD" name="password" id="password" class="form-control" maxlength="40" size="33">
     </div>
-    <div> conferma password
-      <br>
-      <INPUT type="PASSWORD" name="confermaPassword" maxlength="40" size="33">
+    <div>
+      <label for="passwordconferma" class="form-label">Conferma Password</label>
+      <INPUT type="PASSWORD" name="confermaPassword" id="passwordconferma" class="form-control" maxlength="40" size="33">
     </div>
-    <div> data di nascita
-      <br>
-      <INPUT type="Date" >
+    <div>
+      <label for="date" class="form-label">Data di nascita</label>
+      <INPUT type="Date" class="form-control" id="date" >
     </div>
-    <div> sesso
-      <br>
-      M &ensp; <INPUT type="radio" name="sesso"  value="m" >&ensp;&ensp;&ensp;
-      F &ensp;<INPUT type="radio" name="sesso" value="f"  >
+    <div>
+      <legend class="col-form-label">Sesso</legend>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked >
+        <label class="form-check-label" for="gridRadios1"> M </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+        <label class="form-check-label" for="gridRadios1"> F </label>
+      </div>
     </div>
-    <div> data di nascita
-      <br>
-      <INPUT type="Date" >
+    <div>
+      <label for="customRange3" class="form-label">Altezza</label>
+      <input type="range" class="form-range" min="150" max="200" step="5" id="customRange3">
     </div>
-    <div> data di nascita
-      <br>
-      <INPUT type="Date" >
+    <div>
+      <label for="customRange3" class="form-label">Peso</label>
+      <input type="range" class="form-range" min="50" max="100" step="5" id="customRange3">
     </div>
-
-
+    <div>
+      <label class="form-label" for="inlineFormSelectPref">Attività fisica</label>
+      <select class="form-select" id="inlineFormSelectPref">
+        <option selected>Scegli il livello di attività</option>
+        <option value="1">Nessuna</option>
+        <option value="2">fino a 2 ore settimanali</option>
+        <option value="3">da 3 a 5 ore settimanali</option>
+        <option value="4">oltre 5 ore</option>
+      </select>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">
+          nutrizionista testo più meglio da aggiungere
+        </label>
+        <br>
+        <button type="submit" class="btn btn-primary">Sign in</button>
+        <button type="reset" class="btn btn-primary">Reset</button>
+      </div>
+    </div>
    </form>
-
-
-
-
  </div>
- <!-- fine form -->
-
-
-
-
-
-
-
-
-
+ <!-- fine FORM -->
 
 
 </main>
-
-
-
-
-     <!-- 
-        <div class="col">
-          <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-            <img class="mt-4" src=" ../bootstrap/assets/img/favicons/android-chrome-192x192.png" width="72" />
-            <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-                <small class="text-muted">9 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-
-            <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-                <small class="text-muted">9 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-
-            <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-                <small class="text-muted">9 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-
-            <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-                <small class="text-muted">9 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-
-            <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-                <small class="text-muted">9 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-
-            <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-                <small class="text-muted">9 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-
-            <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-                <small class="text-muted">9 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-
-            <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-                <small class="text-muted">9 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-
-            <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-                <small class="text-muted">9 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
-      -->
-
 
 <footer class="text-muted py-5">
   <div class="container">
