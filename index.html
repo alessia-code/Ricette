@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="miocss.css"/>
     <script src="/bootstrap/js/bootstrap.min.js" ></script>
-
+    <script type="text/javascript" src="miojava.js"></script>
+    
   </head>
   <body>
     
@@ -130,18 +131,18 @@
       <div class=" c9 title"> ultime ricette </div>
     </div>
   </div> 
-   <!-- fine articoli e ricette recenti -->
+<!-- fine articoli e ricette recenti -->
 
 <!-- inizio FORM -->
  <div>
-   <form class="containerForm"method="post" action="" name="login">
+   <form class="containerForm" method="post" action="" name="registr" onsubmit="return validaForm();" >
     <div> 
       <label for="nome" class="form-label">Nome</label>
-      <input type="TEXT" name="nome" class="form-control" id="nome" maxlength="30" size="50" placeholder="inserisci nome">
+      <input type="TEXT" name="nome" class="form-control" id="nome" minlength="2" maxlength="30" size="50" placeholder="inserisci nome">
     </div>
     <div> 
       <label for="cognome" class="form-label">Cognome</label>
-      <input type="TEXT" name="cognome" class="form-control" id="cognome" maxlength="30" size="50" placeholder="inserisci cognome">
+      <input type="TEXT" name="cognome" class="form-control" id="cognome" minlength="2" maxlength="30" size="50" placeholder="inserisci cognome">
     </div>
     <div>
       <label for="email" class="form-label">Inserisci email</label>
@@ -153,11 +154,11 @@
     </div>
     <div>
       <label for="password" class="form-label">Inserisci Password</label>
-      <INPUT type="PASSWORD" name="password" id="password" class="form-control" maxlength="40" size="33">
+      <INPUT type="PASSWORD" name="password" id="password" class="form-control" minlength="4" maxlength="40" size="33">
     </div>
     <div>
       <label for="passwordconferma" class="form-label">Conferma Password</label>
-      <INPUT type="PASSWORD" name="confermaPassword" id="passwordconferma" class="form-control" maxlength="40" size="33">
+      <INPUT type="PASSWORD" name="confermaPassword" id="passwordconferma" minlength="4" class="form-control" maxlength="40" size="33">
     </div>
     <div>
       <label for="date" class="form-label">Data di nascita</label>
@@ -166,26 +167,29 @@
     <div>
       <legend class="col-form-label">Sesso</legend>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked >
-        <label class="form-check-label" for="gridRadios1"> M </label>
+        <input class="form-check-input" type="radio" name="sesso" id="maschio" value="maschio" onClick="valoreSesso=this.value;"  >
+        <label class="form-check-label" for="maschio"> M </label>
       </div>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
-        <label class="form-check-label" for="gridRadios1"> F </label>
+        <input class="form-check-input" type="radio" name="sesso" id="femmina" value="femmina" onClick="valoreSesso=this.value;" >
+        <label class="form-check-label" for="femmina"> F </label>
       </div>
     </div>
     <div>
-      <label for="customRange3" class="form-label">Altezza</label>
-      <input type="range" class="form-range" min="150" max="200" step="5" id="customRange3">
+      <label for="rangeAltezza" class="form-label">Altezza:</label>
+      <span id="demoA"></span> cm
+      <input type="range" class="form-range" name = "rangeAltezza" min="150" max="200" step="5" id="rangeAltezza" oninput="return funzioneSliderA();">
     </div>
     <div>
-      <label for="customRange3" class="form-label">Peso</label>
-      <input type="range" class="form-range" min="50" max="100" step="5" id="customRange3">
+      <label for="rangePeso" class="form-label">Peso:</label>
+      <span id="demoP"></span> Kg
+      <input type="range" class="form-range" name="rangePeso" min="50" max="100" step="5" id="rangePeso" value="0" oninput="return funzioneSliderP();">
+      
     </div>
     <div>
-      <label class="form-label" for="inlineFormSelectPref">Attività fisica</label>
-      <select class="form-select" id="inlineFormSelectPref">
-        <option selected>Scegli il livello di attività</option>
+      <label class="form-label" for="attivita">Attività fisica</label>
+      <select class="form-select" id="attivita">
+        <option value="0">Scegli il livello di attività</option>
         <option value="1">Nessuna</option>
         <option value="2">fino a 2 ore settimanali</option>
         <option value="3">da 3 a 5 ore settimanali</option>
@@ -193,8 +197,8 @@
       </select>
       </div>
       <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-        <label class="form-check-label" for="flexCheckDefault">
+        <input class="form-check-input" name="nutrizionista" type="checkbox" value="nutrizionista" id="nutrizionista">
+        <label class="form-check-label" for="nutrizionista">
           nutrizionista testo più meglio da aggiungere
         </label>
         <br>
@@ -205,8 +209,10 @@
    </form>
  </div>
  <!-- fine FORM -->
-
-
+ <!--inizio stampa dei valori iniziali dell'altezza e paso -->
+ <script>document.getElementById("demoA").innerHTML =document.getElementById("rangeAltezza").value;</script>
+ <script>document.getElementById("demoP").innerHTML =document.getElementById("rangePeso").value;</script>
+  <!--fine stampa dei valori iniziali dell'altezza e paso -->
 </main>
 
 <footer class="text-muted py-5">
@@ -217,7 +223,6 @@
     <p class="mb-4">LTW 2021-2022<a href="/"> </p>
   </div>
 </footer>
-
-      
+  
   </body>
 </html>
